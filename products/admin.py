@@ -3,4 +3,15 @@ from .models import Product
 
 # Register your models here.
 
-admin.site.register(Product)
+
+class ProductAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'price',
+        'image_url',
+    )
+
+    ordering = ('name',)
+
+
+admin.site.register(Product, ProductAdmin)
