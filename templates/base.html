@@ -25,7 +25,7 @@
   {% endblock %}
 
   {% block corejs %}
-  <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/55ca140639.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
   </script>
@@ -44,11 +44,11 @@
 </head>
 
 <body>
-  <header class="container-fluid fixed-top">
+  <header class="container-fluid fixed-top">    
     <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <li class="list-inline-item dropdown">
-          <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+          <a class="text-red nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
             <div class="text-center">
               <div><i class="fas fa-user fa-lg"></i></div>
@@ -71,13 +71,13 @@
       </div>
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
         <a href="{% url 'home' %}" class="nav-link main-logo-link">
-          <h2 class="logo-font text-black my-0 text-center"><strong>Absolute Fitness</strong></h2>
+          <h2 class="logo-font text-red my-0 text-center"><strong>Absolute Fitness</strong></h2>
         </a>
       </div>
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           <li class="list-inline-item">
-            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-red{% endif %} nav-link" href="">
               <div class="text-center">
                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                 <p class="my-0">
