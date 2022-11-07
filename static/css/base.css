@@ -109,4 +109,14 @@ footer {
     .header-container {
         padding-top: 164px;
     }
+    
+}
+
+
+@media (max-width: 992px) {
+
+    body {
+        height: calc(100vh + 150px);
+    }
+    
 }
