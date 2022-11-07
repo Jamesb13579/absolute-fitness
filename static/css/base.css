@@ -10,6 +10,23 @@ body {
     font-family: 'Lato';
 }
 
+footer {
+    background: white;
+    color: #ff0000;
+    font-family: 'Lato';
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* google maps */
+
+#map {
+    height: 400px;
+    width: 100%;
+  }
+
 /* from Bulma */
 .icon {
     align-items: center;
