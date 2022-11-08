@@ -1,6 +1,6 @@
 from django.db import models
 
-DAY  = (
+DAY = (
     (0, "Monday"),
     (1, "Tuesday"),
     (2, "Wednesday"),
@@ -10,7 +10,12 @@ DAY  = (
     (6, "Sunday"),
     )
 
-class trainers(models.Model):
+
+class Trainers(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'trainers'
+
     name = models.CharField(max_length=254)
     about = models.TextField()
     image_url = models.URLField(max_length=1024, null=True, blank=True)
@@ -20,12 +25,16 @@ class trainers(models.Model):
         return self.name
 
 
-class classes(models.Model):
+class Classes(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'classes'
+
     name = models.CharField(max_length=254)
     description = models.TextField()
     time = models.TimeField()
     day_of_week = models.IntegerField(choices=DAY, default=0)
-    trainers = models.ForeignKey(trainers, null=True, blank=True, on_delete=models.SET_NULL)
+    trainers = models.ForeignKey(Trainers, null=True, blank=True, on_delete=models.SET_NULL)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
 
@@ -33,7 +42,7 @@ class classes(models.Model):
         return self.name
 
 
-class gym(models.Model):
+class Gym(models.Model):
     name = models.CharField(max_length=254)
     location = models.CharField(max_length=254)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
@@ -41,6 +50,3 @@ class gym(models.Model):
 
     def __str__(self):
         return self.name
-
-
-
