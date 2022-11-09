@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font font-weight-bold"><u>Trainers</u></h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="product-container col-10 offset-1">
+                <div class="row mt-1 mb-2"></div>
+                <div class="container offset-1">
+                    {% for trainer in trainers %}
+                        <div class="row">
+                            <div class="card border-0 col-6">
+                                {% if trainer.image %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ trainer.image.url }}" alt="{{ trainer.name }}">
+                                </a>
+                                {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                        alt="{{ trainer.name }}">
+                                </a>
+                                {% endif %}
+                            </div>
+                            <div class="card-body pb-0 col-6 ">
+                                <h2 class="mb-0 font-weight-bold text-center un"><u>{{ trainer.name }}</u></h2>
+                                <br>
+                                <p class="lead mb-0 text-left ">${{ trainer.about }}</p>
+                            </div>                            
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
