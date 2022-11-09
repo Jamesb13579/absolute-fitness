@@ -25,15 +25,11 @@
                     {% for trainer in trainers %}
                         <div class="row">
                             <div class="card border-0 col-6">
-                                {% if trainer.image %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ trainer.image.url }}" alt="{{ trainer.name }}">
-                                </a>
+                                {% if trainer.image %}                                
+                                    <img class="card-img-top img-fluid" src="{{ trainer.image.url }}" alt="{{ trainer.name }}">                                
                                 {% else %}
-                                <a href="">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                        alt="{{ trainer.name }}">
-                                </a>
+                                        alt="{{ trainer.name }}">                                
                                 {% endif %}
                             </div>
                             <div class="card-body pb-0 col-6 ">

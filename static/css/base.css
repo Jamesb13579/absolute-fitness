@@ -17,8 +17,7 @@ header {
 footer {
     background: white;
     color: #ff0000;
-    font-family: 'Lato';
-    
+    font-family: 'Lato';    
     left: 0;
     bottom: 0;
     width: 100%;
@@ -88,6 +87,10 @@ footer {
     color: white !important;
 }
 
+.image-size {
+    height: 20vw;
+    width: 25vw;
+}
 
 
 .border-black {
@@ -132,6 +135,3 @@ footer {
     
 }
 
-
-    
-}
