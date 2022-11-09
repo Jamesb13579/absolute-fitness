@@ -23,28 +23,21 @@
                 <div class="row mt-1 mb-2"></div>
                 <div class="row d-none d-lg-block">
                     {% for membership in memberships %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card h-100 border-0">
-                            {% if membership.image %}
-                            <a href="">
-                                <img class="card-img-top img-fluid" src="{{ membership.image.url }}" alt="{{ membership.name }}">
-                            </a>
+                    <div class="row">
+                        <div class="card border-0 col-6">
+                            {% if membership.image %}                                
+                                <img class="card-img-top img-fluid" src="{{ membership.image.url }}" alt="{{ membership.name }}">                                
                             {% else %}
-                            <a href="">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ membership.name }}">
-                            </a>
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                    alt="{{ membership.name }}">                                
                             {% endif %}
-                            <div class="card-body pb-0">
-                                <p class="mb-0">{{ membership.name }}</p>
-                            </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">${{ membership.price }}</p>                                            
-                                    </div>
-                                </div>
-                            </div>
                         </div>
+                        <div class="card-body pb-0 col-6 ">
+                            <h2 class="mb-0 font-weight-bold text-center un"><u>{{ membership.name }}</u></h2>
+                            <br>
+                            <p class="lead mb-0 text-left ">{{ membership.about }}</p>
+                            <p class="lead mb-0 text-left ">€{{ membership.price }}</p>
+                        </div>                            
                     </div>
                     {% endfor %}
                 </div>

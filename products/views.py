@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Product, Memberships
 
 # Create your views here.
@@ -17,7 +17,7 @@ def products(request):
 
 
 def memberships(request):
-    """ a view to return shop page"""
+    """ a view to return membership options"""
 
     memberships = Memberships.objects.all()
 
@@ -26,3 +26,17 @@ def memberships(request):
     }
 
     return render(request, 'products/memberships.html', context)
+
+
+def product_detail(request, product_id):
+    """ a view to show individial item details"""
+
+    product = get_object_or_404(Product, pk=product_id)
+    
+    context = {
+        'product': product,
+        
+    }
+
+    return render(request, 'products/product_detail.html', context)
+
