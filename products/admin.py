@@ -9,6 +9,7 @@ class ProductAdmin(admin.ModelAdmin):
         'name',
         'price',
         'image_url',
+        'membership'
     )
 
     ordering = ('name',)
@@ -16,13 +17,11 @@ class ProductAdmin(admin.ModelAdmin):
 class MembershipsAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'price',
-        'image_url',
     )
 
     ordering = ('name',)
 
 
 admin.site.register(Product, ProductAdmin)
-admin.site.register(Memberships, MembershipsAdmin)
+#admin.site.register(Memberships, MembershipsAdmin)
 

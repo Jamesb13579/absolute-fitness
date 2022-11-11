@@ -6,8 +6,13 @@ from .models import Product, Memberships
 
 def products(request):
     """ a view to return shop page"""
-
     products = Product.objects.all()
+    membership = None
+    if request.GET:
+        if 'membership' in request.GET:
+            memberships = request.GET['membership'].split(',')
+            products = products.filter(membership__name__in=memberships)
+            memberships = Memberships.objects.filter(name__in=memberships)
 
     context = {
         'products': products,
@@ -16,10 +21,10 @@ def products(request):
     return render(request, 'products/products.html', context)
 
 
-def memberships(request):
+def category(request):
     """ a view to return membership options"""
 
-    memberships = Memberships.objects.all()
+    category = Category().objects.all()
 
     context = {
         'memberships': memberships,
@@ -39,4 +44,6 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
 
