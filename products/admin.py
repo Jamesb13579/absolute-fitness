@@ -23,5 +23,5 @@ class MembershipsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Product, ProductAdmin)
-#admin.site.register(Memberships, MembershipsAdmin)
+admin.site.register(Memberships, MembershipsAdmin)
 
