@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 
 
 class Product(models.Model):
@@ -9,7 +10,8 @@ class Product(models.Model):
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     membership = models.ForeignKey('Memberships', null=True, blank=True,
-                                 on_delete=models.SET_NULL)    
+                                 on_delete=models.SET_NULL)       
+    membership_lenght = models.IntegerField(null=True, blank=True)                                 
 
     def __str__(self):
         return self.name
@@ -21,6 +23,7 @@ class Memberships(models.Model):
         verbose_name_plural = 'Memberships'
 
     name = models.CharField(max_length=254)
+    
     
     def __str__(self):
         return self.name
