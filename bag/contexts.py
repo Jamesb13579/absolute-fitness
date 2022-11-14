@@ -34,12 +34,14 @@ def bag_contents(request):
                 })
 
     grand_total = total
+    grand_total_delivery = total + 5
 
     context = {
         'bag_items': bag_items,
         'total': total,
         'product_count': product_count,
         'grand_total': grand_total,
+        'grand_total_delivery': grand_total_delivery,
     }
 
     return context
