@@ -33,7 +33,6 @@ def bag_contents(request):
                     'size': size,
                 })
 
-
     grand_total = total
 
     context = {
