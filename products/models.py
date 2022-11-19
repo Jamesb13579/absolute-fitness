@@ -11,7 +11,7 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     category = models.ForeignKey('Category', null=True, blank=True,
                                  on_delete=models.SET_NULL)       
-    membership_lenght = models.IntegerField(null=True, blank=True)                                 
+    membership_length = models.IntegerField(null=True, blank=True)                                 
 
     def __str__(self):
         return self.name
