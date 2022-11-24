@@ -11,18 +11,14 @@ from .forms import ProductForm
 
 
 def products(request):
-    """ A view to show all products, including sorting and search queries """
-
+    """ a view to return shop page"""
     products = Product.objects.all()
     categories = None
-    direction = None
-
-    if 'category' in request.GET:
-        categories = request.GET['category'].split(',')
-        products = products.filter(category__name__in=categories)
-        categories = Category.objects.filter(name__in=categories)
-    
-    current_sorting = f'{sort}_{direction}'
+    if request.GET:
+        if 'categories' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products.filter(name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
     context = {
         'products': products,
