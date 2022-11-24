@@ -21,7 +21,7 @@
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
-                <div class="container offset-1">
+                <div class="container offset-1 d-none d-lg-block">
                     {% for trainer in trainers %}
                         <div class="row">
                             <div class="card border-0 col-6">
@@ -35,9 +35,32 @@
                             <div class="card-body pb-0 col-6 ">
                                 <h2 class="mb-0 font-weight-bold text-center un"><u>{{ trainer.name }}</u></h2>
                                 <br>
-                                <p class="lead mb-0 text-left ">${{ trainer.about }}</p>
+                                <p class="lead mb-0 text-left ">{{ trainer.about }}</p>
                             </div>                            
                         </div>
+                    {% endfor %}
+                </div>
+                <div class="row d-lg-none">
+                    {% for trainer in trainers %}
+                            <div class=>
+                                <div class="my-auto px-3 text-center">
+                                    <h2 class="mb-0 font-weight-bold text-center"><u>{{ trainer.name }}</u></h2>
+
+                                </div>
+                                                                
+                                {% if trainer.image %}                                
+                                    <img class="card-img-top img-fluid" src="{{ trainer.image.url }}" alt="{{ trainer.name }}">                                
+                                {% else %}
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                        alt="{{ trainer.name }}">                                
+                                {% endif %}
+                                
+                                <div>
+                                    <p class="mb-0 text-center ">{{ trainer.about }}</p>
+                                </div>                                
+                            </div>
+                            <hr class="w-50 mb-1">
+                                                
                     {% endfor %}
                 </div>
             </div>

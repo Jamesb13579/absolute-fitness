@@ -21,10 +21,10 @@
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
-                <div class="container">
+                <div class="container d-none d-lg-block">
                     {% for g in gym %}
                         <div class="row">
-                            <div class="card border-0 col-6">
+                            <div class="card border-0 col-6 image-margin">
                                 {% if g.image %}                                
                                     <img class="card-img-top img-fluid" src="{{ g.image.url }}" alt="{{ g.name }}">                                
                                 {% else %}
@@ -33,11 +33,34 @@
                                 {% endif %}
                             </div>
                             <div class="card-body pb-0 col-6 ">
-                                <h2 class="mb-0 font-weight-bold text-center un"><u>{{ g.name }}</u></h2>
+                                <h2 class="mb-0 font-weight-bold text-center"><u>{{ g.name }}</u></h2>
                                 <br>
                                 <p class="lead mb-0 text-center">{{ g.about }}</p>
                             </div>                            
                         </div>
+                    {% endfor %}
+                </div>
+                <div class="row d-lg-none">
+                    {% for g in gym %}
+                            <div class=>
+                                <div class="my-auto px-3 text-center">
+                                    <h2 class="mb-0 font-weight-bold text-center"><u>{{ g.name }}</u></h2>
+
+                                </div>
+                                                                
+                                {% if g.image %}                                
+                                    <img class="card-img-top img-fluid" src="{{ g.image.url }}" alt="{{ g.name }}">                                
+                                {% else %}
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                        alt="{{ g.name }}">                                
+                                {% endif %}
+                                
+                                <div>
+                                    <p class="mb-0 text-center ">{{ g.about }}</p>
+                                </div>                                
+                            </div>
+                            <hr class="w-50 mb-1">
+                                                
                     {% endfor %}
                 </div>
             </div>
