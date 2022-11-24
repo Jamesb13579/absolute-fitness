@@ -14,14 +14,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col text-center mt-3">
-                <h2 class="logo-font font-weight-bold"><u>Our Gyms</u></h2>
+                <h2 class="logo-font font-weight-bold"><u>Our Gym</u></h2>
                 <hr class="w-50 mb-1">
             </div>
         </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
-                <div class="container offset-1">
+                <div class="container">
                     {% for g in gym %}
                         <div class="row">
                             <div class="card border-0 col-6">
@@ -35,7 +35,7 @@
                             <div class="card-body pb-0 col-6 ">
                                 <h2 class="mb-0 font-weight-bold text-center un"><u>{{ g.name }}</u></h2>
                                 <br>
-                                <p class="lead mb-0 text-left ">{{ g.about }}</p>
+                                <p class="lead mb-0 text-center">{{ g.about }}</p>
                             </div>                            
                         </div>
                     {% endfor %}
