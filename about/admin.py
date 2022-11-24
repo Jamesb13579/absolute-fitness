@@ -27,6 +27,7 @@ class GymAdmin(admin.ModelAdmin):
     list_display = (
         'name',
         'location',
+        'about',
     )
 
     ordering = ('name',)
@@ -35,5 +36,4 @@ class GymAdmin(admin.ModelAdmin):
 admin.site.register(Trainers, TrainersAdmin)
 admin.site.register(Classes, ClassesAdmin)
 admin.site.register(Gym, GymAdmin)
-
 
