@@ -24,11 +24,11 @@
                 <div class="container d-none d-lg-block">
                     {% for g in gym %}
                         <div class="row">
-                            <div class="card border-0 col-6 image-margin">
+                            <div class="card border-0 col-6 ">
                                 {% if g.image %}                                
-                                    <img class="card-img-top img-fluid" src="{{ g.image.url }}" alt="{{ g.name }}">                                
+                                    <img class="card-img-top img-fluid image-margin" src="{{ g.image.url }}" alt="{{ g.name }}">                                
                                 {% else %}
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                    <img class="card-img-top img-fluid image-margin" src="{{ MEDIA_URL }}noimage.png"
                                         alt="{{ g.name }}">                                
                                 {% endif %}
                             </div>
