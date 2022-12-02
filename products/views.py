@@ -10,6 +10,12 @@ from .forms import ProductForm
 # Create your views here.
 
 
+def subscribe(request):
+    """ a view to subscribe"""
+
+    return render(request, 'products/subscribe.html')
+
+
 def products(request):
     """ a view to return shop page"""
     products = Product.objects.all()

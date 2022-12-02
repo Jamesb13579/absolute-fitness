@@ -9,10 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" 
-        content="Absolute fitness, gym, fitness, workout, work out, weights, running,
+    <meta name="keywords" content="Absolute fitness, gym, fitness, workout, work out, weights, running,
         lose weight, diet, exercise, waterford gym, local places to work out, how do i get fit,
-        How do i begin to get fit" >
+        How do i begin to get fit">
     {% endblock %}
 
     {% block extra_meta %}
@@ -22,6 +21,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet"
+                        type="text/css">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <!-- Favicon necessaries-->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ MEDIA_URL }}apple-touch-icon.png">
@@ -34,7 +35,8 @@
 
     {% block corejs %}
     <script src="https://kit.fontawesome.com/55ca140639.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
     </script>
@@ -42,7 +44,9 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script type="module" src="{% static 'js/map.js' %}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+        defer>
     </script>
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
@@ -127,18 +131,18 @@
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
     </div>
     {% endif %}
 
@@ -149,14 +153,14 @@
     {% endblock %}
 
     {% block postloadjs %}
-        <script type="text/javascript">
-            $('.toast').toast('show');
-        </script>
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
     {% endblock %}
 
     <footer>
-        <div class="row">            
-            <div class="col-lg-6 col-md-12 mt-4">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
                 <h1 class="text-center text-red">
                     Absolute Fitness Waterford
                 </h1>
@@ -173,24 +177,30 @@
                 </h3>
                 <div>
                     <h2 class="text-center">
-                        <a class="text-red d-inline m-3" href="#">
-                            <i class="fa fa-brands fa-facebook"></i>                        
+                        <a class="text-red d-inline m-3" href="https://www.facebook.com/profile.php?id=100088349142078"
+                            target="_blank">
+                            <i class="fa fa-brands fa-facebook"></i>
                         </a>
-                        <a class="text-red d-inline m-3" href="#">
-                            <i class="fa fa-brands fa-instagram"></i>                        
+                        <a class="text-red d-inline m-3" href="https://www.instagram.com/" target="_blank">
+                            <i class="fa fa-brands fa-instagram"></i>
                         </a>
-                        <a class="text-red d-inline m-3" href="#">
-                            <i class="fa fa-brands fa-twitter"></i>                        
+                        <a class="text-red d-inline m-3" href="https://twitter.com/" target="_blank">
+                            <i class="fa fa-brands fa-twitter"></i>
                         </a>
                     </h2>
                 </div>
+                <div class="text-center text-red">                    
+                    <a class="logo-font font-weight-bold nav-link text-red mr-5" href="{% url 'subscribe' %}">
+                        <h2>Subscribe!</h2>
+                        <p>Get exclusive offers and discount codes by subscribing to our monthly newsletter</p>
+                    </a>
+                </div>
             </div>
             <div class="col-lg-6 col-md-12" id="map">
-                <div id="map"></div>                    
+                <div id="map"></div>
             </div>
         </div>
     </footer>
-
 
 </body>
 
