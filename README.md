@@ -123,28 +123,6 @@ The Lato font is the main font used for the body of the website. This font was i
 ![Home Page](docs/wireframes/home.png)
 </details>
 
-<details>
-
- <summary>Home Decor</summary>
-
-![Home Decor](docs/wireframes/home_decor.png)
-</details>
-
-
-<details>
-
- <summary>Bag</summary>
-
-![Bag](docs/wireframes/shopping_bag.png)
-</details>
-
-<details>
-
- <summary>Checkout</summary>
-
-![Checkout](docs/wireframes/checkout.png)
-</details>
-
 
 ## Agile Methodology
 Github projects was used to manage the development process using an agile approach. Please see link to project board [here](https://github.com/users/AliOKeeffe/projects/2)
@@ -199,26 +177,26 @@ Custom Error Pages were created to give the user more information on the error a
 - The options to Sign up or Log in will change to the option to log out once a user has logged in.
 - Once a user has signed in, the 'My Profile' option becomes available in the User dropdown.
 
-![Logged In](docs/readme_images/features/logged_in.png)
-- If the superuser has signed in, more options such as 'Home Decor Management', 'Design Service Management', 'Previous Project Management' and 'Enquiries' become available in the User dropdown.
+![Logged In](docs/readme_images/log_in.png)
+- If the superuser has signed in, more options such as 'product management' become available in the User dropdown.
 
-![user menu](docs/readme_images/features/superuser_login.png)
+![user menu](docs/readme_images/admin_login.png)
 - The navigation bar is fully responsive, collapsing into a hamburger menu when the screen size becomes too small.
 - Hovering over the links will turn the font gold.
 
 **Bag Icon**
 
-![bag](docs/readme_images/features/bag.png)
+![bag](docs/readme_images/basket.png)
 - Located on the right side of the navbar next to the User icon is the bag Icon.
 - Once a product is added to the bag, a number displaying the total quantity of items appears, located at the top right of the bag icon.
 - As the user adds products to their bag, a toast message appears in the top right-hand corner of the screen informing the user that the item has been added, giving them a snapshot of the bag contents and the total cost of the bag.
 
-![bag total](docs/readme_images/features/bag_total.png)
+![bag total](docs/readme_images/shopping_bag.png)
 - Clicking the bag icon navigates the user to the shopping bag page which displays a summary of what's been added.
 
 ### Footer
 
-![footer](docs/readme_images/features/footer.png)
+![footer](docs/readme_images/footer.png)
 
 - The footer appears at the bottom of every page.
 - The footer section includes links to Facebook, Instagram, Twitter.
@@ -230,7 +208,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 **Call to Action Section**
 
-![Home page](docs/readme_images/features/home_page.png)
+![Home page](docs/readme_images/homepage.png)
 
 - The home page includes a call to action section which encourages the user to 'buy a membership'.
 
@@ -242,15 +220,15 @@ Custom Error Pages were created to give the user more information on the error a
 
 **Sign Up**
 
-![Sign Up](docs/readme_images/features/sign_up.png)
+![Sign Up](docs/readme_images/sign_up.png)
 
 **Sign In**
 
-![Sign In](docs/readme_images/features/sign_in.png)
+![Sign In](docs/readme_images/log_in.png)
 
 **Log Out**
 
-![Sign Out](docs/readme_images/features/sign_out.png)
+![Sign Out](docs/readme_images/log_out.png)
 
 - Django allauth was installed and used to create the Sign up, Log in and Log out functionality. 
 - Success messages inform the user if they have logged in/ logged out successfully.
@@ -261,13 +239,13 @@ Custom Error Pages were created to give the user more information on the error a
 ### Profile
 **Delivery Details**
 
-![Delivery Details](docs/readme_images/features/delivery_info.png)
+![Delivery Details](docs/readme_images/cust_details.png)
 - The delivery details section stores the user's delivery address and phone number.
 - The information provided here is used to autofill the delivery address when placing an order.
 
 **Order History**
 
-![Order History](docs/readme_images/features/order_history.png)
+![Order History](docs/readme_images/order_history.png)
 - The order history section displays a list of every order the user has placed.
 - The table displays the order number, date it was ordered and the order total.
 - Clicking the order number will take the user to a summary page of that order.
@@ -275,7 +253,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Product Detail
 
-![Product Detail](docs/readme_images/features/product_detail.png)
+![Product Detail](docs/readme_images/product_detail.png)
 - When the user clicks on an individual product card they are taken to the full product details. The link is a bootstrap stretched link so clicking anywhere on the card will work.
 - The product detail page displays the product image, title, excerpt, price, product details and estimated dispatch time.
 - If the user is a superuser, edit and delete buttons will appear below these details.
@@ -290,7 +268,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Bag
 
-![shopping bag](docs/readme_images/features/shopping_bag.png)
+![shopping bag](docs/readme_images/shopping_bag.png)
 - When the user clicks on the shopping bag icon in the nav bar they are taken to the shopping bag page which shows the products which the user has added to their cart, unit price, quantity and subtotal.
 
 **Quantity Buttons**
@@ -300,7 +278,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 **Update and Delete Buttons**
 
-![Update Delete buttons](docs/readme_images/features/update_delete_buttons.png)
+![Update Delete buttons](docs/readme_images/edit_update_delete.png)
 - Clicking the 'update' icon button saves any changes to the quantity and updates the item's subtotal.
 - Clicking the 'Bin' icon button removes the item completely from the user's bag.
 - If the user manually types in a negative number and clicks 'update', the item will be removed from the item from the bag.
@@ -313,7 +291,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 ### Checkout 
 
-![checkout](docs/readme_images/features/checkout.png)
+![checkout](docs/readme_images/checkout.png)
 
 **Details**
 - Within the details section the user can fill out their contact details, delivery address, and card number.
@@ -337,7 +315,7 @@ Custom Error Pages were created to give the user more information on the error a
 
 **Confirmation**
 
-![order_confirmation](docs/readme_images/features/order_confirmation.png)
+![order_confirmation](docs/readme_images/order_success.png)
 - Once the order has been processed the user is taken to the checkout success page.
 This page summarises the completed order.
 - An email will be sent to the user with their order confirmation
@@ -346,7 +324,7 @@ This page summarises the completed order.
 ### Account Management
 **Add Product**
 
-![Add product](docs/readme_images/features/add_product.png)
+![Add product](docs/readme_images/add_product.png)
 - The add product page can be accessed by clicking the 'Add product' button in the user dropdown menu, under Account Management. These options are only visible to superusers.Product
 - If a user tries to add a product (by changing the url) without being a superuser they are redirected to a custom 403 page.
 - The user must fill out all the fields that have an Asterix. If the form is submitted with any of these fields left blank or with just whitespace then an error message will appear above that particular field, notifying the user of the issue.
@@ -438,7 +416,7 @@ Manual testing was conducted on the following elements that appear on every page
 * Test that Nav Links including all social media links work.
 
 ### Home Page
-Manual testing was conducted on the following elements of the [Home Page](https://my-tasty-eats.herokuapp.com/):
+Manual testing was conducted on the following elements of the Home Page:
      
 * Test that user welcome message displays username.
 
@@ -449,7 +427,7 @@ Manual testing was conducted on the following elements of the [Home Page](https:
     * Test that when clicking certain images or text you will be brougth to the right place. 
 
 ### Products page
-Manual testing was conducted on the following elements of the [Recipe Page](https://my-tasty-eats.herokuapp.com/lamb-chops-with-rosemary-and-garlic/) and [Edit Recipe Page](https://my-tasty-eats.herokuapp.com/edit-recipe/lamb-chops-with-rosemary-and-garlic):
+Manual testing was conducted on the following elements of the Product Page and Add Product Page]:
 
 * Test that products can be added to the basket.
 
@@ -461,7 +439,7 @@ Manual testing was conducted on the following elements of the [Recipe Page](http
 
      
 ### Sign in/Sign Out/Sign Up Pages
-Manual testing was conducted on the following elements of the [Sign In Page](https://my-tasty-eats.herokuapp.com/accounts/login/), [Sign Out Page](https://my-tasty-eats.herokuapp.com/accounts/logout/) and [Sign Up Page](https://my-tasty-eats.herokuapp.com/accounts/signup/:
+Manual testing was conducted on the following elements of the Sign In Page, Sign Out Page and Sign Up Page:
 
 * Users can register, log in and logout.
 
@@ -472,15 +450,14 @@ Manual testing was conducted on the following elements of the [Sign In Page](htt
 
 *   All HTML pages were run through the [W3C HTML](https://validator.w3.org/) Validator showed some errors due to Django variables and tags but all HTML passed.
 
-![HTML Checker](static/site-pictures/readme/html.png)
 
 *   CSS stylesheet was run through the [W3C CSS](https://jigsaw.w3.org/css-validator/) Validator and showed no errors.
 
-![CSS Checker](static/site-pictures/readme/cssval1.png)
+![CSS Checker](static/site-pictures/css_val.png)
 
-*   Python files such as views.py, models.py, etc. were run through the [Pep8](http://pep8online.com/) validator, and no errors were found.
+*   Python files such as views.py, models.py, etc. were run checked with the  pycodestyle validator, and no errors were found.
 
-![PEP8 Checker](static/site-pictures/readme/pep8.png)
+
 
 ### Bugs & Issues
 
