@@ -10,7 +10,7 @@ To test this system, test card details can be used. A list of these can be found
 
 The live link can be found here - [Absolute Fitness](https://absolute-fitness.herokuapp.com/)
 
-![Site Mockup](docs/readme_images/site_mockup.png)
+![Site Mockup](docs/readme_images/screen_mockup.png)
 
 - [User Experience (UX)](#user-experience--ux-)
   * [User Stories](#user-stories)
@@ -182,7 +182,7 @@ Custom Error Pages were created to give the user more information on the error a
 ## Features
 
 ### Header
-![header](docs/readme_images/features/header.png)
+![header](docs/readme_images/header.png)
 
 **Logo**
 - A customised logo was created using Hatchful by Shopify which is a free logo generator.
@@ -356,7 +356,7 @@ This page summarises the completed order.
 
 **Edit Product**
 
-![edit product](docs/readme_images/features/edit_product.png)
+![edit product](docs/readme_images/edit_delete.png)
 - The superuser can choose to edit a Product by clicking the edit button under the product description on the Interior Design products Page. 
 - The form opens with all fields populated with the original content.
 - The image field displays a thumbnail of the existing image and has a checkbox option to remove it. Checking this will change the image to the default image.
@@ -365,17 +365,19 @@ This page summarises the completed order.
 
 **Delete product**
 
-![Delete product](docs/readme_images/features/delete_product.png)
+![Delete product](docs/readme_images/edit_delete.png)
 - The superuser can choose to delete a product by clicking the delete button under the product description on the products Page.
 - The superuser is asked to confirm if they wish to delete the product or cancel.
 - The superuser will receive a success message notifying them that the product has been successfully deleted.
+
+![Delete success](docs/readme_images/delete_success.png)
 
 
 
 ### Error Pages
 Custom Error Pages were created to give the user more information on the error and to guide them back to the site.
 
-![403 error](docs/readme_images/features/403_error.png)
+![403 error](docs/readme_images/error404.png)
 
 
 - 400 Bad Request - Absolute Fitness is unable to handle this request.
@@ -411,7 +413,7 @@ To tell search engines which areas of the website they cannot access, a robots.t
 ### Social Media Marketing 
 For natural social media marketing, a Facebook business page has been made for this website. A "Shop Now" button on the Facebook page directs visitors to the Absolute Fitness website. The page works well with the content media marketing on the main site since it makes it simple to share pictures of previous projects and new product introductions.
 
-![Facebook Page](docs/readme_images/facebook_page.png)
+![Facebook Page](docs/readme_images/facebook.png)
 
 ### Email Marketing
 Visitors to the website can subscribe to the newsletter without creating an account. On the website, a signup form is present in the footer. This enables the company to inform clients and potential clients about new goods and services and promotional deals. This service was developed with Mailchimp.
