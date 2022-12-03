@@ -22,33 +22,8 @@
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
-                <div>
+                <div class="row mt-1 mb-2 offset-1">
                     <img src="{{ MEDIA_URL }}timetable.png" alt=" gym class timetable">
-                </div>
-                <div class="row d-none d-lg-block">
-                    {% for class in classes %}
-                            <div class="row ">
-                                <div class="col-2 my-auto text-uppercase">
-                                    <h3 class="my-4 px-4"> {{ class.name }} </h3>
-                                </div>
-                                
-                                {% if class.image %}
-                                <div class="col-5 w-100 my-auto mx-auto">                               
-                                    <img class="card-img-top img-fluid " src="{{ class.image.url }}" alt="{{ class.name }}">
-                                </div>                                
-                                {% else %}  
-                                <div class="col-5"></div>                              
-                                    <img class="card-img-top img-fluid image-size" src="{{ MEDIA_URL }}noimage.png" alt="{{ class.name }}">  
-                                </div>                              
-                                {% endif %}
-                                
-                                <div class="col-3 card-body pb-0">
-                                    <p class="mb-0 py-auto mx-auto text-center">{{ class.description }}</p>
-                                </div>                                
-                            </div>
-                            <hr class="w-50 mb-1">
-                                                
-                    {% endfor %}
                 </div>
                 <div class="row d-lg-none">
                     {% for class in classes %}

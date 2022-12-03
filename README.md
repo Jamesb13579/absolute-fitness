@@ -104,8 +104,6 @@ The following user stories were scoped out of the project due to time constraint
 #### Colour Scheme
 Colour palette from Coolors
 
-![Colour Scheme](docs/readme_images/colour_scheme.png)
-
 For this site i wanted to keep the colour scheme clean and simple. the colours mostly used were white red and black. 
 
 Great care was taken to establish a good contrast between background colours and text at all times to ensure maximum user accessibility.
@@ -156,9 +154,7 @@ The 5 Epics listed above were documented within the Github project as Milestones
 
 ## Database Schema 
 
-Two relational databases were used to create this site - during production SQLite was used and then Postgres was used for the deployed Heroku version. Below is an image of how the database models relate to each other:
-
-![Database Schema](docs/readme_images/database_schema.png)
+Two relational databases were used to create this site - during production SQLite was used and then Postgres was used for the deployed Heroku version.
 
 ## Security Features and Defensive Design
 ### User Authentication
@@ -421,7 +417,74 @@ For natural social media marketing, a Facebook business page has been made for t
 Visitors to the website can subscribe to the newsletter without creating an account. On the website, a signup form is present in the footer. This enables the company to inform clients and potential clients about new goods and services and promotional deals. This service was developed with Mailchimp.
 
 ## Testing
-Testing and results can be found [here](/TESTING.md)
+
+During development errors or warnings were fixed as they appeared such as indentation errors, lines too long, or extra space issues.  This helped keep the code clean and readable so other errors or bugs that arose were identified more easily. 
+
+After deployment, all features were tested for responsive design on a laptop and mobile (Samsung phone and tablet). I sent the site to a couple of people who tested to see if they could find any issues and anything found was reported to me and sorted. . The website was checked on Chrome, Firefox.
+
+Throughout the development process, page elements were inspected using Google Chrome's built-in Developer Tool, which also assisted in troubleshooting difficulties with the HTML and CSS codes.
+
+The README.md was proofread and passed through Grammarly and all links were checked before final submission.
+
+## Manual Testing
+
+### Common Elements Testing
+Manual testing was conducted on the following elements that appear on every page:
+
+* Test that Logo redirects to home screen.
+
+* Test that Nav Links including all social media links work.
+
+### Home Page
+Manual testing was conducted on the following elements of the [Home Page](https://my-tasty-eats.herokuapp.com/):
+     
+* Test that user welcome message displays username.
+
+    * On logging in, there is a message alert at the top of the page which tells the user that they have successfully logged in.
+    
+* Test that product cards redirect user to product pages.
+
+    * Test that when clicking certain images or text you will be brougth to the right place. 
+
+### Products page
+Manual testing was conducted on the following elements of the [Recipe Page](https://my-tasty-eats.herokuapp.com/lamb-chops-with-rosemary-and-garlic/) and [Edit Recipe Page](https://my-tasty-eats.herokuapp.com/edit-recipe/lamb-chops-with-rosemary-and-garlic):
+
+* Test that products can be added to the basket.
+
+* Test that payments will go through and order confirmation will work.
+     
+* Test that when logged in you can save your details for next time.
+     
+* Test that orders are also appearing on the back end.
+
+     
+### Sign in/Sign Out/Sign Up Pages
+Manual testing was conducted on the following elements of the [Sign In Page](https://my-tasty-eats.herokuapp.com/accounts/login/), [Sign Out Page](https://my-tasty-eats.herokuapp.com/accounts/logout/) and [Sign Up Page](https://my-tasty-eats.herokuapp.com/accounts/signup/:
+
+* Users can register, log in and logout.
+
+### Pages are Responsive
+* Manual testing was conducted for responsiveness on large, medium and small screens.
+
+### Validator Testing
+
+*   All HTML pages were run through the [W3C HTML](https://validator.w3.org/) Validator showed some errors due to Django variables and tags but all HTML passed.
+
+![HTML Checker](static/site-pictures/readme/html.png)
+
+*   CSS stylesheet was run through the [W3C CSS](https://jigsaw.w3.org/css-validator/) Validator and showed no errors.
+
+![CSS Checker](static/site-pictures/readme/cssval1.png)
+
+*   Python files such as views.py, models.py, etc. were run through the [Pep8](http://pep8online.com/) validator, and no errors were found.
+
+![PEP8 Checker](static/site-pictures/readme/pep8.png)
+
+### Bugs & Issues
+
+On one of my final look through of the project, the toggle menu wasn't showing, I had accidentally the class type styling this and hadn't realised
+
+Another issue I found was Crispy fields not working correctly for me due to a minor spelling error.
 
 ## Deployment - Heroku
 
@@ -620,14 +683,14 @@ AWS_S3_OBJECT_PARAMETERS = {
 - Your static files and media files should be automatically linked from django to your S3 bucket.
 
 ## Forking this repository
-- Locate the repository at this link [Absolute Fitness](https://github.com/AliOKeeffe/PP5-Fresh-Nest).
+- Locate the repository at this link [Absolute Fitness](https://github.com/Jamesb13579/absolute-fitness).
 - At the top of the repository, on the right side of the page, select "Fork" from the buttons available. 
 - A copy of the repository is now created.
 
 ## Cloning this repository
 To clone this repository follow the below steps: 
 
-1. Locate the repository at this link [Absolute Fitness](https://github.com/AliOKeeffe/PP5-Fresh-Nest). 
+1. Locate the repository at this link [Absolute Fitness](https://github.com/Jamesb13579/absolute-fitness). 
 2. Under **'Code'**, see the different cloning options, HTTPS, SSH, and GitHub CLI. Click the prefered cloning option, and then copy the link provided. 
 3. Open **Terminal**.
 4. In Terminal, change the current working directory to the desired location of the cloned directory.
